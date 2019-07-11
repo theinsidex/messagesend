@@ -1,0 +1,28 @@
+spring:
+  data:
+    mongodb:
+      database: sender
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: user
+    password:
+  h2:
+    console:
+    enabled: true
+  mail:
+    host: smtp.yandex.ru
+    username: ivanbranchaev1@yandex.ru
+    password: qwerty620
+    port: 465
+    protocol: smtps
+mail:
+  debug: true
+
+server:
+  port: 8080
+app:
+  cron: 0 0 17 * * MON-FRI

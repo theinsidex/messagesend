@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div style="margin-top: 10px;margin-bottom:10px;float:right;">
+    <a href="/user/list"><input type="button" name="add" class="btn btn-secondary" value="Home page"></a>
+</div>
+<h2>Registration</h2>
+<form action="#" th:action="@{/user/save}" th:object="${user}" method="post">
+
+    <div class="input-group mb-3" style="width:30%;">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="name" aria-label="Username" th:name="name" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3" style="width:30%;">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Email" aria-label="Email " th:name="email" aria-describedby="basic-addon1">
+    </div>
+    <input class="btn btn-info" type="submit" value="Sign up"/>
+</form>
+</body>
+</html>

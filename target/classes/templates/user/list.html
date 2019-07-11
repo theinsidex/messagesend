@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div style="margin-top: 10px;margin-bottom:10px;float:right;">
+        <a href="/user/list"><input type="button" name="add" class="btn btn-secondary" value="Home page"></a>
+    </div>
+    <div style="margin-top: 10px;margin-bottom:10px;">
+        <a href="/user/add"><input type="button" name="add" class="btn btn-info" value="Add new user"></a>
+    </div>
+    <table class="table">
+    <thead  class="thead-dark">
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th>Delete</th>
+    </thead>
+    <tr th:each="user: ${users}">
+        <td th:utext="${user.id}"></td>
+        <td th:utext="${user.name}"></td>
+        <td th:utext="${user.email}"></td>
+        <td><a th:href="@{/user/{id}/delete(id=${user.id})}">Удалить</a></td>
+    </tr>
+</table>
+</body>
+</html>
