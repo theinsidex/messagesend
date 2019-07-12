@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import ru.neoflex.sender.Model.User;
 import ru.neoflex.sender.Service.UserService;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -25,7 +26,7 @@ public class UserControllerTest {
     @Mock
     private Model model;
     @Test
-    public void listUser() {
+    public void listUser() throws IOException {
         when(userService.listUsers()).thenReturn(ImmutableList.of());
         userController.listUser(model);
         verify(userService).listUsers();

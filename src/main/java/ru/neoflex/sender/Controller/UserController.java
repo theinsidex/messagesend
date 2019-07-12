@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.neoflex.sender.Model.User;
+import ru.neoflex.sender.Parser.CsvParser;
 import ru.neoflex.sender.Service.MailScheduler;
 import ru.neoflex.sender.Service.MailSender;
 import ru.neoflex.sender.Service.UserService;
 
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -26,8 +28,9 @@ public class UserController {
     }
 //Получение списка всех пользователей
     @GetMapping("/list")
-    public String listUser(Model model){
+    public String listUser(Model model) throws IOException {
         List<User> users = userService.listUsers();
+        CsvParser parser = new CsvParser();
         model.addAttribute("users",users);
         return "user/list";
     }

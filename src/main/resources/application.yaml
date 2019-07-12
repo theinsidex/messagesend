@@ -21,8 +21,86 @@ spring:
     protocol: smtps
 mail:
   debug: true
+logging:
+  file: C:/elk/spring-boot-elk.log
+file:
+  location: C:/data.csv
 
 server:
   port: 8080
 app:
   cron: 0 0 17 * * MON-FRI
+eureka:
+  instance:
+    appname: ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+
+      defaultZone: http://my-eureka-server-us.com:9001/eureka
+
+
+---
+spring:
+  profiles: abc-service-replica01
+eureka:
+  instance:
+    appname: ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://my-eureka-server-us.com:9001/eureka
+server:
+  port: 8001
+
+---
+spring:
+  profiles: abc-service-replica02
+eureka:
+  instance:
+    appname: ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://my-eureka-server-fr.com:9002/eureka
+server:
+  port: 8002
+
+---
+spring:
+  profiles: abc-service-replica03
+eureka:
+  instance:
+    appname: ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://my-eureka-server-vn.com:9003/eureka
+server:
+  port: 8003
+
+---
+spring:
+  profiles: abc-service-replica04
+eureka:
+  instance:
+    appname: ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://my-eureka-server-us.com:9001/eureka
+server:
+  port: 8004
+
+---
+spring:
+  profiles: abc-service-replica05
+eureka:
+  instance:
+    appname: ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://my-eureka-server-fr.com:9002/eureka
+server:
+  port: 8005

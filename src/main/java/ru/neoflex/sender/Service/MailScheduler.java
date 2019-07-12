@@ -1,5 +1,8 @@
 package ru.neoflex.sender.Service;
 
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -11,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class MailScheduler {
+public class MailScheduler implements Job {
 
     private final String  SUBJECT = "Чайная пауза";
     private final String  TEXT = "Пора пить чай!";
@@ -34,7 +37,12 @@ public class MailScheduler {
     }
     public List<User> checkUsers(){
         return userService.listUsers().stream() //проверка на наличие email
-                .filter(x -> !x.getEmail().equals(null))
+                .filter(x -> !x.getEmail().isEmpty())
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+        sendMessage();
     }
 }

@@ -1,0 +1,6 @@
+projectKey=ru.neoflex:sender
+serverUrl=http://localhost:9000
+serverVersion=7.9.1.27448
+dashboardUrl=http://localhost:9000/dashboard?id=ru.neoflex%3Asender
+ceTaskId=AWvmAD6RHc3m_d3Sn0M_
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWvmAD6RHc3m_d3Sn0M_
