@@ -34,7 +34,7 @@ public class UserRestController {
         userService.insert(user);
     }
 //Удаление пользователя
-    @RequestMapping(value = "/delete",
+    @RequestMapping(value = "/delete/{id}",
                     method = RequestMethod.DELETE,
                     produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody

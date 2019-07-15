@@ -138,11 +138,6 @@
             <artifactId>reactor-core</artifactId>
             <version>3.2.10.RELEASE</version>
         </dependency>
-		<dependency>
-			<groupId>com.netflix.eureka</groupId>
-			<artifactId>eureka-client</artifactId>
-			<version>1.9.8</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
 		<dependency>
 			<groupId>org.jacoco</groupId>
