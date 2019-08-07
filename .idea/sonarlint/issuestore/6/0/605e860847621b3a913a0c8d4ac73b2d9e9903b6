@@ -1,0 +1,15 @@
+
+2squid:S1643&"Use a StringBuilder instead.(Ò±ö:
+3squid:S16434"Use a StringBuilder instead.(íÛÕë
+8squid:S16435"Use a StringBuilder instead.(¯åò›ùÿÿÿÿ
+8squid:S16436"Use a StringBuilder instead.(¦÷ÁÇÿÿÿÿÿ
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ž–û‚ùÿÿÿÿ
+_squid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯µìŠ
+_squid:S4488,"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(®Üçš
+dsquid:S4488<"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(à‰ºÐúÿÿÿÿ
+Csquid:S1068"'Remove this unused "LOG" private field.(ªùåŒþÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì®Ê¤øÿÿÿÿ
+Osquid:UselessImportCheck
+"+Remove this unused import 'java.util.Date'.(¸…¼ü
+Xsquid:UselessImportCheck"4Remove this unused import 'java.util.logging.Level'.(…µÛ¶
+msquid:UselessImportCheck"DRemove this unused import 'ru.neoflex.sender.Service.MailScheduler'.(‡þ ¿øÿÿÿÿ
